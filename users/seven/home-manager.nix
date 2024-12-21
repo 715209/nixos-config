@@ -2,10 +2,15 @@
 
 {
   home.stateVersion = "24.11";
+  xdg.enable = true;
 
   home.packages = [
     pkgs.firefox
   ];
+
+  xdg.configFile = {
+    "ghostty/config".text = builtins.readFile ./ghostty;
+  };
 
   programs.neovim = {
     enable = true;
@@ -42,6 +47,20 @@
       core.askPass = ""; # needs to be empty to use terminal for ask pass
       credential.helper = "store"; # want to make this more secure
       init.defaultBranch = "main";
+    };
+  };
+
+  programs.jujutsu = {
+    enable = true;
+    settings = {
+      user = {
+	name = "Brian Spit";
+        email = "brian@715209.net";
+      };
+      signing = {
+        sign-all = true;
+	backend = "gpg";
+      };
     };
   };
 
