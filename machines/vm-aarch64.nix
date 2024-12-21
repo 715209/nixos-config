@@ -12,6 +12,8 @@
   nix.package = pkgs.nixVersions.latest;
   nix.extraOptions = "experimental-features = nix-command flakes";
 
+  nixpkgs.config.allowUnfree = true;
+
   virtualisation.vmware.guest.enable = true;
 
   # Use the systemd-boot EFI boot loader.
@@ -62,6 +64,15 @@
   };
 
   services.displayManager.defaultSession = "none+i3";
+
+  environment.systemPackages = with pkgs; [
+    gnumake
+    xclip
+
+    (writeShellScriptBin "xrandr-auto" ''
+      xrandr --output Virtual-1 --auto
+    '')
+  ];
 
   system.stateVersion = "24.11";
 
