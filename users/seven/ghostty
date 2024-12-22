@@ -1,2 +1,3 @@
 background = 000000
 gtk-titlebar = false
+font-size = 10

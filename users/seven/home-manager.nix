@@ -67,4 +67,8 @@
   programs.tmux = {
     enable = true;
   };
+
+  programs.direnv= {
+    enable = true;
+  };
 }
