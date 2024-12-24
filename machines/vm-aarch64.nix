@@ -68,6 +68,7 @@
   environment.systemPackages = with pkgs; [
     gnumake
     xclip
+    killall
 
     (writeShellScriptBin "xrandr-auto" ''
       xrandr --output Virtual-1 --auto

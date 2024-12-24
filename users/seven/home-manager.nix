@@ -6,6 +6,7 @@
 
   home.packages = [
     pkgs.firefox
+    pkgs.htop
   ];
 
   xdg.configFile = {
