@@ -73,12 +73,15 @@
     enable = true;
     settings = {
       user = {
-	name = "Brian Spit";
+        name = "Brian Spit";
         email = "brian@715209.net";
       };
       signing = {
         sign-all = true;
-	backend = "gpg";
+        backend = "gpg";
+      };
+      ui = {
+        default-command = "log";
       };
     };
   };
