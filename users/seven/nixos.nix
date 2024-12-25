@@ -10,7 +10,7 @@
   users.users.seven = {
      isNormalUser = true;
      home = "/home/seven";
-     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+     extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.
      shell = pkgs.fish;
    };
 }
