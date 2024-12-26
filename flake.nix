@@ -12,9 +12,7 @@
     };
 
     ghostty = {
-      url = "git+ssh://git@github.com/ghostty-org/ghostty";
-      inputs.nixpkgs-stable.follows = "nixpkgs";
-      inputs.nixpkgs-unstable.follows = "nixpkgs";
+      url = "github:ghostty-org/ghostty";
     };
   };
 
@@ -34,11 +32,11 @@
             home-manager.useUserPackages = true;
             home-manager.users.seven = import ./users/seven/home-manager.nix;
           }
-	  {
+          {
             environment.systemPackages = [
               ghostty.packages.aarch64-linux.default
-	    ];
-	  }
+            ];
+          }
         ];
       };
     };
