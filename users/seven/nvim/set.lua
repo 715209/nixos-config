@@ -11,7 +11,6 @@ opt.expandtab = true
 opt.smartindent = true
 
 -- opt.termguicolors = true
-opt.termguicolors = true
 opt.colorcolumn = "80"
 -- opt.signcolumn = "yes"
 opt.signcolumn = "no"

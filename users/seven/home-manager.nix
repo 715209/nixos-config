@@ -8,6 +8,8 @@
     pkgs.firefox
     pkgs.htop
     pkgs.ripgrep
+    pkgs.ghostty
+    pkgs.vscode
   ];
 
   xdg.configFile = {

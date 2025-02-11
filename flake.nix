@@ -10,13 +10,9 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    ghostty = {
-      url = "github:ghostty-org/ghostty";
-    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ghostty, ... }:
+  outputs = { self, nixpkgs, home-manager, ... }:
     let
       lib = nixpkgs.lib;
     in {
@@ -31,11 +27,6 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.seven = import ./users/seven/home-manager.nix;
-          }
-          {
-            environment.systemPackages = [
-              ghostty.packages.aarch64-linux.default
-            ];
           }
         ];
       };
