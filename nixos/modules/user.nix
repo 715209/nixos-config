@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, user, ... }:
 
 {
   # Add ~/.local/bin to PATH
@@ -7,10 +7,10 @@
   programs.fish.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.seven = {
+  users.users.${user} = {
+     #home = "/home/seven";
      isNormalUser = true;
-     home = "/home/seven";
-     extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.
+     extraGroups = [ "wheel" "docker" "networkmanager" ];
      shell = pkgs.fish;
    };
 }
