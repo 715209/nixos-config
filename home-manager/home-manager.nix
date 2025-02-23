@@ -13,6 +13,7 @@
     flameshot
     htop
     ripgrep
+    tailscale
     thunderbird
     vscode
   ];

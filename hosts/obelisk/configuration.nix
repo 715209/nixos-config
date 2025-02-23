@@ -11,6 +11,7 @@
     # Services
     ../../nixos/modules/services/docker.nix
     ../../nixos/modules/services/postgresql.nix
+    ../../nixos/modules/services/tailscale.nix
 
     # Hardware
     ../../nixos/modules/hardware/nvidia.nix
