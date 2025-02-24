@@ -9,12 +9,14 @@
   };
 
   home.packages = with pkgs; [
+    direnv
     firefox
     flameshot
     htop
     ripgrep
     tailscale
     thunderbird
+    tmux
     vscode
   ];
 
