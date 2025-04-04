@@ -4,6 +4,8 @@
   environment.systemPackages = with pkgs; [
     mangohud
     protonup
+
+    lutris
   ];
 
   programs.steam.enable = true;

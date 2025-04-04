@@ -9,13 +9,21 @@
   };
 
   home.packages = with pkgs; [
+    btop
+    ctlptl
     direnv
     firefox
     flameshot
     htop
+    kind
+    kubectl
+    obs-studio
+    postman
     ripgrep
+    rustdesk
     tailscale
     thunderbird
+    tilt
     tmux
     vscode
   ];

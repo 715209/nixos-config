@@ -2,6 +2,6 @@
 {
   # Basic networking settings
   # networking.firewall.enable = false;
-  networking.networkmanager.enable = true;
+  networking.networkmanager.enable = false;
 }
 
