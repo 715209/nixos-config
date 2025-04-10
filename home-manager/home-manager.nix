@@ -1,7 +1,11 @@
-{ user, ... }:
+{ user, inputs, ... }:
 { config, pkgs, lib, ... }:
 
-{
+let
+  unstablePkgs = import inputs.nixpkgs-unstable {
+    system = pkgs.system;
+  };
+in {
   home = {
     stateVersion = "24.11";
     username = user;
@@ -17,7 +21,6 @@
     htop
     kind
     kubectl
-    obs-studio
     postman
     ripgrep
     rustdesk
@@ -26,6 +29,7 @@
     tilt
     tmux
     vscode
+    unstablePkgs.obs-studio
   ];
 
   imports = [
