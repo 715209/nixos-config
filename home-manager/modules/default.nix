@@ -4,7 +4,7 @@
     ./ghostty.nix
     ./git.nix
     ./gpg.nix
-    ./jujutsu.nix
+    #./jujutsu.nix
     ./neovim
   ];
 }
