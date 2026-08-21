@@ -5,7 +5,8 @@
       background = "000000";
       gtk-titlebar = false;
       font-size = 14;
-      font-family = "Terminus";
+      #font-family = "Terminus";
+      font-family = "Hack";
     };
   };
 }

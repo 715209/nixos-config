@@ -3,11 +3,11 @@
 
 let
   unstablePkgs = import inputs.nixpkgs-unstable {
-    system = pkgs.system;
+    system = pkgs.stdenv.hostPlatform.system;
   };
 in {
   home = {
-    stateVersion = "24.11";
+    stateVersion = "25.11";
     username = user;
     homeDirectory = "/home/${user}";
   };
@@ -16,6 +16,7 @@ in {
     btop
     ctlptl
     direnv
+    discord
     firefox
     flameshot
     htop
@@ -23,13 +24,15 @@ in {
     kubectl
     postman
     ripgrep
-    rustdesk
-    tailscale
+    #rustdesk
     thunderbird
     tilt
     tmux
     vscode
-    unstablePkgs.obs-studio
+    tigervnc
+    #unstablePkgs.obs-studio
+    #bubblewrap
+    google-chrome
   ];
 
   imports = [

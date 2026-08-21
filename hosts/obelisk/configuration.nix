@@ -7,18 +7,20 @@
     ../../nixos/modules
     ../../nixos/modules/desktop.nix
     ../../nixos/modules/gaming.nix
+    ../../nixos/modules/vm.nix
 
     # Services
     ../../nixos/modules/services/docker.nix
-    ../../nixos/modules/services/postgresql.nix
     ../../nixos/modules/services/tailscale.nix
 
     # Hardware
     ../../nixos/modules/hardware/nvidia.nix
     ../../nixos/modules/hardware/logitech.nix
+    # ../../nixos/modules/vfio.nix
   ];
 
   networking.hostName = hostname; 
+  networking.firewall.trustedInterfaces = [ "virbr0" ];
 
   time.timeZone = "Europe/Amsterdam";
 

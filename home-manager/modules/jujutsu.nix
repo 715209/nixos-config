@@ -12,6 +12,7 @@
       };
       ui = {
         default-command = "log";
+        pager = "less -FRX";
       };
     };
   };

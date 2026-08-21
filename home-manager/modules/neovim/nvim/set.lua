@@ -1,7 +1,7 @@
 local opt = vim.opt
 opt.hidden = true
 opt.wrap = false
-opt.number = true
+-- opt.number = true
 -- opt.relativenumber = true
 
 opt.shiftwidth = 4

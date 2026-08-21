@@ -4,7 +4,10 @@
     ./ghostty.nix
     ./git.nix
     ./gpg.nix
-    #./jujutsu.nix
+    #./hyprland.nix
+    ./jujutsu.nix
     ./neovim
+    ./emacs.nix
+    ./waybar.nix
   ];
 }

@@ -2,15 +2,21 @@
 
 {
   # Enable OpenGL
-  hardware.graphics.enable = true;
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      libva-vdpau-driver
+      nvidia-vaapi-driver
+    ];
+  };
 
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"];
 
   # Temp fix https://github.com/NixOS/nixpkgs/issues/375730#issuecomment-2625157971
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
-    version = "570.133.07"; # use new 570 drivers
-    sha256_64bit = "sha256-LUPmTFgb5e9VTemIixqpADfvbUX1QoTT2dztwI3E3CY=";
+    version = "580.178.04"; # use new 570 drivers
+    sha256_64bit = "sha256-WXWobuRb/8tib1GuM9EWmxCBhqLqR61lHnLxP6S21vk=";
     sha256_aarch64 = "sha256-yTovUno/1TkakemRlNpNB91U+V04ACTMwPEhDok7jI0=";
     openSha256 = "sha256-9l8N83Spj0MccA8+8R1uqiXBS0Ag4JrLPjrU3TaXHnM=";
     settingsSha256 = "sha256-XMk+FvTlGpMquM8aE8kgYK2PIEszUZD2+Zmj2OpYrzU=";
@@ -52,4 +58,6 @@
   # 	nvidiaBusId = "PCI:01:0:0";
   #   amdgpuBusId = "PCI:13:0:0";
   # };
+
+  hardware.nvidia-container-toolkit.enable = true;
 }

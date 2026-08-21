@@ -4,13 +4,21 @@
   nix.extraOptions = "experimental-features = nix-command flakes";
 
   # Let Nixpkgs use non-free software if needed
-  nixpkgs.config.allowUnfree = true;
+  #nixpkgs.config.allowUnfree = true;
 
   # Some system-wide packages
   environment.systemPackages = with pkgs; [
     gnumake
     xclip
     killall
+    hostapd
+    wireless-regdb
   ];
+
+  hardware.wirelessRegulatoryDatabase = true;
+
+  boot.extraModprobeConfig = ''
+    options cfg80211 ieee80211_regdom="NL"
+  '';
 }
 

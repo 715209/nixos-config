@@ -6,6 +6,7 @@
     ./networking.nix
     ./nix.nix
     ./user.nix
+    ./obs.nix
 
     ./services/bluetooth.nix
   ];

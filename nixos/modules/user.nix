@@ -10,7 +10,7 @@
   users.users.${user} = {
      #home = "/home/seven";
      isNormalUser = true;
-     extraGroups = [ "wheel" "docker" "networkmanager" ];
+     extraGroups = [ "wheel" "docker" "networkmanager" "video" "render" "libvirtd" ];
      shell = pkgs.fish;
    };
 }

@@ -2,6 +2,7 @@
   programs.neovim = {
     enable = true;
     withPython3 = true;
+    withRuby = false;
     defaultEditor = true;
     plugins = with pkgs; [
       vimPlugins.nvim-lspconfig

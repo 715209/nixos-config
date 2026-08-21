@@ -3,9 +3,12 @@
 {
   environment.systemPackages = with pkgs; [
     mangohud
-    protonup
+    protonup-ng
 
     lutris
+
+    wineWow64Packages.stable
+    winetricks
   ];
 
   programs.steam.enable = true;

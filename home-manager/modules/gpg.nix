@@ -2,7 +2,7 @@
   programs.gpg.enable = true;
   services.gpg-agent = {
     enable = true;
-    pinentryPackage = pkgs.pinentry-tty;
+    pinentry.package = pkgs.pinentry-tty;
 
     # Cache the keys forever so we don't get asked for a password
     defaultCacheTtl = 31536000;
