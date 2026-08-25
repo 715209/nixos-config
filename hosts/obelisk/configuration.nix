@@ -16,7 +16,7 @@
     # Hardware
     ../../nixos/modules/hardware/nvidia.nix
     ../../nixos/modules/hardware/logitech.nix
-    # ../../nixos/modules/vfio.nix
+    ../../nixos/modules/vfio.nix
   ];
 
   networking.hostName = hostname; 

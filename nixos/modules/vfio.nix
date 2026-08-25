@@ -23,15 +23,15 @@
     "vfio_virqfd"
   ];
 
-  # Bind GTX 1060 + its audio to VFIO
-  boot.extraModprobeConfig = ''
-    options vfio-pci ids=10de:1c03,10de:10f1
-  '';
+  # # Bind GTX 1060 + its audio to VFIO
+  # boot.extraModprobeConfig = ''
+  #   options vfio-pci ids=10de:1c03,10de:10f1
+  # '';
 
-  boot.blacklistedKernelModules = [
-    "nouveau"
-    "nvidia"
-    "nvidia_drm"
-    "nvidia_modeset"
-  ];
+  # boot.blacklistedKernelModules = [
+  #   "nouveau"
+  #   "nvidia"
+  #   "nvidia_drm"
+  #   "nvidia_modeset"
+  # ];
 }

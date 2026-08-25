@@ -11,7 +11,7 @@
   };
 
   # Load nvidia driver for Xorg and Wayland
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = ["modesetting" "nvidia"];
 
   # Temp fix https://github.com/NixOS/nixpkgs/issues/375730#issuecomment-2625157971
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
@@ -53,11 +53,20 @@
     #package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
+  hardware.nvidia.prime = {
+    offload = {
+        enable = true;
+        enableOffloadCmd = true;
+    };
+    nvidiaBusId = "PCI:1@0:0:0";
+    amdgpuBusId = "PCI:12@0:0:0";
+  };
+
   # hardware.nvidia.prime = {
   #   sync.enable = true;
   # 	nvidiaBusId = "PCI:01:0:0";
   #   amdgpuBusId = "PCI:13:0:0";
   # };
 
-  hardware.nvidia-container-toolkit.enable = true;
+  #### hardware.nvidia-container-toolkit.enable = true;
 }
