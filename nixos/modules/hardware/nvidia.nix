@@ -68,5 +68,6 @@
   #   amdgpuBusId = "PCI:13:0:0";
   # };
 
-  #### hardware.nvidia-container-toolkit.enable = true;
+  hardware.nvidia-container-toolkit.enable = true;
+  virtualisation.docker.daemon.settings.features.cdi = true;
 }
