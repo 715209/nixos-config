@@ -14,25 +14,21 @@ in {
 
   home.packages = with pkgs; [
     btop
-    ctlptl
     direnv
     discord
     firefox
     flameshot
     htop
-    kind
     kubectl
     postman
     ripgrep
     #rustdesk
     thunderbird
-    tilt
     tmux
     vscode
     tigervnc
-    #unstablePkgs.obs-studio
-    #bubblewrap
     google-chrome
+    sonobus
   ];
 
   imports = [
